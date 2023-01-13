@@ -28,5 +28,6 @@ python3 main.py
 docker build -t blog-app .
 
 
+docker run -d -p 5000:5000 blog-app
 
 
