@@ -11,7 +11,7 @@ python3 -m venv venv
 #activate the virtual environment
 source venv/bin/activate
 #2 method: this one doesnt work as intended...
-source /home/ec2-user/Pyappdevtest/venv/bin/activate
+source /venv/bin/activate
 #install packages
 python -m pip install -U pip
 
