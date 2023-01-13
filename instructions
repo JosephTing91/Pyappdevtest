@@ -23,3 +23,10 @@ pip install -r requirements.txt
 python3 main.py
 
 
+#dockerize instructions
+
+docker build -t blog-app .
+
+
+
+
