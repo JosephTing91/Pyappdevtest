@@ -1,5 +1,5 @@
-FROM python:3.9
+FROM python:3.7
+WORKDIR /app
 ADD . .
-RUN python3 -m venv venv
-RUN source /venv/bin/activate
+RUN pip install -r requirements.txt
 CMD ["python", "main.py"]
