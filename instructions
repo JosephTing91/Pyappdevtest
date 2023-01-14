@@ -53,5 +53,5 @@ docker push 701837564712.dkr.ecr.us-east-1.amazonaws.com/blogapp:latest
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 701837564712.dkr.ecr.us-east-1.amazonaws.com
 
 #tag images and push
-docker image tag blogapp:latest  701837564712.dkr.ecr.us-east-1.amazonaws.com/blogapp:latest
+docker image tag blog-app:latest  701837564712.dkr.ecr.us-east-1.amazonaws.com/blogapp:latest
 docker push 701837564712.dkr.ecr.us-east-1.amazonaws.com/blogapp:latest

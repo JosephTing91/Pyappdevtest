@@ -2,11 +2,11 @@ apiVersion: v1
 data:
   CreateDB.sql: |-
     CREATE TABLE blog_post (
-            id INTEGER NOT NULL, 
+            id SERIAL PRIMARY KEY, 
             title VARCHAR (250) NOT NULL, date VARCHAR (250) NOT NULL, 
             body TEXT NOT NULL, author VARCHAR (250) NOT NULL, 
             img_url VARCHAR (250) NOT NULL, subtitle VARCHAR (250) NOT NULL, 
-            PRIMARY KEY (id), UNIQUE (title)
+            UNIQUE (title)
             );
 kind: ConfigMap
 metadata:
