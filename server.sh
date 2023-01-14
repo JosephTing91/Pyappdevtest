@@ -1,5 +1,10 @@
 #user data
 
+
+#add to docker group
+sudo usermod -aG docker ${USER}
+
+
 sudo yum update -yum
 sudo yum install git -y
 sudo yum install python 3.

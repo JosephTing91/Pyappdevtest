@@ -5,6 +5,8 @@
 git clone https://github.com/JosephTing91/Pyappdevtest.git
 
 
+export PATH=$PATH:/usr/local/bin
+
 #create virtual environment
 python3 -m venv venv
 
@@ -27,7 +29,26 @@ python3 main.py
 
 docker build -t blog-app .
 
-
 docker run -d -p 5000:5000 blog-app
 
 
+
+
+#on eks bootstrap...
+docker build -t blog-app .
+
+docker tag blog-app:latest public.ecr.aws/v8g7z4s8/blog-app
+
+docker push public.ecr.aws/v8g7z4s8/blog-app
+
+
+docker push 701837564712.dkr.ecr.us-east-1.amazonaws.com/blogapp:latest
+
+
+
+#authenticate into ECR
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 701837564712.dkr.ecr.us-east-1.amazonaws.com
+
+#tag images and push
+docker image tag blogapp:latest  701837564712.dkr.ecr.us-east-1.amazonaws.com/blogapp:latest
+docker push 701837564712.dkr.ecr.us-east-1.amazonaws.com/blogapp:latest
