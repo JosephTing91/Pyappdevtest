@@ -1,9 +1,12 @@
 #Steps for running on server...
 
-
+sudo systemctl docker.service start
 
 git clone https://github.com/JosephTing91/Pyappdevtest.git
 
+git clone --branch feature https://github.com/JosephTing91/Pyappdevtest.git
+
+git clone https://github.com/JosephTing91/Pyappdevtest.git
 
 export PATH=$PATH:/usr/local/bin
 
